@@ -36,3 +36,9 @@ $ python3 model_gru_BI_BN_IN.py --repeats [INTEGER] --verbose [0|1|2] --epochs [
 
 ### Dataset
 [OpenFace 2.0](https://github.com/TadasBaltrusaitis/OpenFace) 동영상으로부터 시선, 얼굴각도, 감정데이터를 추출하는 toolkit
+<img width="1015" alt="스크린샷 2021-05-26 오후 1 46 35" src="https://user-images.githubusercontent.com/75473005/119604085-6e654800-be29-11eb-8dc6-f4148c067db1.png">
+
+### Results
+<img width="1016" alt="스크린샷 2021-05-26 오후 1 52 47" src="https://user-images.githubusercontent.com/75473005/119604283-c439f000-be29-11eb-8842-1dfe2cca2dff.png">
+<img width="1015" alt="스크린샷 2021-05-26 오후 1 53 00" src="https://user-images.githubusercontent.com/75473005/119604290-c603b380-be29-11eb-92b8-f62fa9b5d531.png">
+<img width="1014" alt="스크린샷 2021-05-26 오후 1 53 10" src="https://user-images.githubusercontent.com/75473005/119604297-c7cd7700-be29-11eb-8fa9-145672b878a6.png">
