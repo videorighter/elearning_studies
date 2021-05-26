@@ -1,0 +1,457 @@
+2021-05-06 07:38:05.113554: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-06 07:38:07.087576: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-05-06 07:38:07.088147: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-05-06 07:38:07.121763: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-06 07:38:07.122093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:2b:00.0 name: GeForce RTX 3070 computeCapability: 8.6
+coreClock: 1.83GHz coreCount: 46 deviceMemorySize: 7.79GiB deviceMemoryBandwidth: 417.29GiB/s
+2021-05-06 07:38:07.122110: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-06 07:38:07.123686: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-05-06 07:38:07.123715: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-05-06 07:38:07.124223: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-05-06 07:38:07.124339: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-05-06 07:38:07.125205: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-05-06 07:38:07.125583: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-05-06 07:38:07.125647: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-05-06 07:38:07.125728: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-06 07:38:07.126070: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-06 07:38:07.126340: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-05-06 07:38:07.126556: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-05-06 07:38:07.127085: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-05-06 07:38:07.127149: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-06 07:38:07.127432: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:2b:00.0 name: GeForce RTX 3070 computeCapability: 8.6
+coreClock: 1.83GHz coreCount: 46 deviceMemorySize: 7.79GiB deviceMemoryBandwidth: 417.29GiB/s
+2021-05-06 07:38:07.127444: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-06 07:38:07.127455: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-05-06 07:38:07.127464: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-05-06 07:38:07.127474: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-05-06 07:38:07.127483: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-05-06 07:38:07.127492: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-05-06 07:38:07.127501: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusparse.so.11
+2021-05-06 07:38:07.127510: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudnn.so.8
+2021-05-06 07:38:07.127548: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-06 07:38:07.127847: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-06 07:38:07.128112: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-05-06 07:38:07.128130: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+2021-05-06 07:38:07.414948: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-06 07:38:07.414986: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-05-06 07:38:07.414991: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+2021-05-06 07:38:07.415181: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-06 07:38:07.415492: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-06 07:38:07.415775: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:941] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-06 07:38:07.416032: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6984 MB memory) -> physical GPU (device: 0, name: GeForce RTX 3070, pci bus id: 0000:2b:00.0, compute capability: 8.6)
+WARNING:tensorflow:Layer gru will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+WARNING:tensorflow:Layer gru will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+WARNING:tensorflow:Layer gru will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+2021-05-06 07:38:08.219500: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-05-06 07:38:08.238244: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 3899905000 Hz
+Epoch 1/200
+2021-05-06 07:38:10.522948: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublas.so.11
+2021-05-06 07:38:10.919774: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcublasLt.so.11
+2021-05-06 07:38:10.932209: I tensorflow/stream_executor/cuda/cuda_blas.cc:1838] TensorFloat-32 will be used for the matrix multiplication. This will only be logged once.
+85/85 [==============================] - 35s 379ms/step - loss: 0.8033 - accuracy: 0.5579 - val_loss: 0.6367 - val_accuracy: 0.6778
+
+Epoch 00001: val_loss improved from inf to 0.63669, saving model to ./gru_models/GRU_01-0.6367_1.hdf5
+Epoch 2/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.6655 - accuracy: 0.6576 - val_loss: 0.5814 - val_accuracy: 0.7225
+
+Epoch 00002: val_loss improved from 0.63669 to 0.58137, saving model to ./gru_models/GRU_02-0.5814_1.hdf5
+Epoch 3/200
+85/85 [==============================] - 32s 375ms/step - loss: 0.6151 - accuracy: 0.7061 - val_loss: 0.5562 - val_accuracy: 0.7344
+
+Epoch 00003: val_loss improved from 0.58137 to 0.55620, saving model to ./gru_models/GRU_03-0.5562_1.hdf5
+Epoch 4/200
+85/85 [==============================] - 32s 376ms/step - loss: 0.5871 - accuracy: 0.7254 - val_loss: 0.5394 - val_accuracy: 0.7466
+
+Epoch 00004: val_loss improved from 0.55620 to 0.53938, saving model to ./gru_models/GRU_04-0.5394_1.hdf5
+Epoch 5/200
+85/85 [==============================] - 32s 380ms/step - loss: 0.5630 - accuracy: 0.7340 - val_loss: 0.5294 - val_accuracy: 0.7506
+
+Epoch 00005: val_loss improved from 0.53938 to 0.52944, saving model to ./gru_models/GRU_05-0.5294_1.hdf5
+Epoch 6/200
+85/85 [==============================] - 32s 374ms/step - loss: 0.5449 - accuracy: 0.7454 - val_loss: 0.5196 - val_accuracy: 0.7521
+
+Epoch 00006: val_loss improved from 0.52944 to 0.51959, saving model to ./gru_models/GRU_06-0.5196_1.hdf5
+Epoch 7/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.5297 - accuracy: 0.7501 - val_loss: 0.5151 - val_accuracy: 0.7592
+
+Epoch 00007: val_loss improved from 0.51959 to 0.51511, saving model to ./gru_models/GRU_07-0.5151_1.hdf5
+Epoch 8/200
+85/85 [==============================] - 31s 370ms/step - loss: 0.5202 - accuracy: 0.7569 - val_loss: 0.5072 - val_accuracy: 0.7662
+
+Epoch 00008: val_loss improved from 0.51511 to 0.50722, saving model to ./gru_models/GRU_08-0.5072_1.hdf5
+Epoch 9/200
+85/85 [==============================] - 31s 369ms/step - loss: 0.5094 - accuracy: 0.7626 - val_loss: 0.5018 - val_accuracy: 0.7680
+
+Epoch 00009: val_loss improved from 0.50722 to 0.50183, saving model to ./gru_models/GRU_09-0.5018_1.hdf5
+Epoch 10/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.4885 - accuracy: 0.7788 - val_loss: 0.4995 - val_accuracy: 0.7717
+
+Epoch 00010: val_loss improved from 0.50183 to 0.49950, saving model to ./gru_models/GRU_10-0.4995_1.hdf5
+Epoch 11/200
+85/85 [==============================] - 31s 370ms/step - loss: 0.4851 - accuracy: 0.7769 - val_loss: 0.4924 - val_accuracy: 0.7699
+
+Epoch 00011: val_loss improved from 0.49950 to 0.49238, saving model to ./gru_models/GRU_11-0.4924_1.hdf5
+Epoch 12/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.4781 - accuracy: 0.7791 - val_loss: 0.4867 - val_accuracy: 0.7736
+
+Epoch 00012: val_loss improved from 0.49238 to 0.48666, saving model to ./gru_models/GRU_12-0.4867_1.hdf5
+Epoch 13/200
+85/85 [==============================] - 31s 370ms/step - loss: 0.4648 - accuracy: 0.7850 - val_loss: 0.4836 - val_accuracy: 0.7780
+
+Epoch 00013: val_loss improved from 0.48666 to 0.48360, saving model to ./gru_models/GRU_13-0.4836_1.hdf5
+Epoch 14/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.4539 - accuracy: 0.7946 - val_loss: 0.4785 - val_accuracy: 0.7788
+
+Epoch 00014: val_loss improved from 0.48360 to 0.47846, saving model to ./gru_models/GRU_14-0.4785_1.hdf5
+Epoch 15/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.4465 - accuracy: 0.8019 - val_loss: 0.4792 - val_accuracy: 0.7865
+
+Epoch 00015: val_loss did not improve from 0.47846
+Epoch 16/200
+85/85 [==============================] - 31s 370ms/step - loss: 0.4430 - accuracy: 0.8050 - val_loss: 0.4721 - val_accuracy: 0.7876
+
+Epoch 00016: val_loss improved from 0.47846 to 0.47208, saving model to ./gru_models/GRU_16-0.4721_1.hdf5
+Epoch 17/200
+85/85 [==============================] - 31s 369ms/step - loss: 0.4282 - accuracy: 0.8098 - val_loss: 0.4695 - val_accuracy: 0.7899
+
+Epoch 00017: val_loss improved from 0.47208 to 0.46945, saving model to ./gru_models/GRU_17-0.4695_1.hdf5
+Epoch 18/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.4225 - accuracy: 0.8100 - val_loss: 0.4660 - val_accuracy: 0.7936
+
+Epoch 00018: val_loss improved from 0.46945 to 0.46598, saving model to ./gru_models/GRU_18-0.4660_1.hdf5
+Epoch 19/200
+85/85 [==============================] - 31s 369ms/step - loss: 0.4124 - accuracy: 0.8204 - val_loss: 0.4511 - val_accuracy: 0.8021
+
+Epoch 00019: val_loss improved from 0.46598 to 0.45106, saving model to ./gru_models/GRU_19-0.4511_1.hdf5
+Epoch 20/200
+85/85 [==============================] - 31s 370ms/step - loss: 0.3949 - accuracy: 0.8296 - val_loss: 0.4458 - val_accuracy: 0.8043
+
+Epoch 00020: val_loss improved from 0.45106 to 0.44576, saving model to ./gru_models/GRU_20-0.4458_1.hdf5
+Epoch 21/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.3951 - accuracy: 0.8271 - val_loss: 0.4439 - val_accuracy: 0.8076
+
+Epoch 00021: val_loss improved from 0.44576 to 0.44395, saving model to ./gru_models/GRU_21-0.4439_1.hdf5
+Epoch 22/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.3891 - accuracy: 0.8293 - val_loss: 0.4406 - val_accuracy: 0.8121
+
+Epoch 00022: val_loss improved from 0.44395 to 0.44056, saving model to ./gru_models/GRU_22-0.4406_1.hdf5
+Epoch 23/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.3753 - accuracy: 0.8369 - val_loss: 0.4419 - val_accuracy: 0.8073
+
+Epoch 00023: val_loss did not improve from 0.44056
+Epoch 24/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.3758 - accuracy: 0.8366 - val_loss: 0.4425 - val_accuracy: 0.8202
+
+Epoch 00024: val_loss did not improve from 0.44056
+Epoch 25/200
+85/85 [==============================] - 32s 374ms/step - loss: 0.3653 - accuracy: 0.8393 - val_loss: 0.4427 - val_accuracy: 0.8161
+
+Epoch 00025: val_loss did not improve from 0.44056
+Epoch 26/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.3675 - accuracy: 0.8420 - val_loss: 0.4385 - val_accuracy: 0.8191
+
+Epoch 00026: val_loss improved from 0.44056 to 0.43850, saving model to ./gru_models/GRU_26-0.4385_1.hdf5
+Epoch 27/200
+85/85 [==============================] - 32s 375ms/step - loss: 0.3548 - accuracy: 0.8471 - val_loss: 0.4304 - val_accuracy: 0.8224
+
+Epoch 00027: val_loss improved from 0.43850 to 0.43038, saving model to ./gru_models/GRU_27-0.4304_1.hdf5
+Epoch 28/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.3455 - accuracy: 0.8577 - val_loss: 0.4398 - val_accuracy: 0.8246
+
+Epoch 00028: val_loss did not improve from 0.43038
+Epoch 29/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.3451 - accuracy: 0.8558 - val_loss: 0.4430 - val_accuracy: 0.8206
+
+Epoch 00029: val_loss did not improve from 0.43038
+Epoch 30/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.3433 - accuracy: 0.8551 - val_loss: 0.4337 - val_accuracy: 0.8235
+
+Epoch 00030: val_loss did not improve from 0.43038
+Epoch 31/200
+85/85 [==============================] - 31s 370ms/step - loss: 0.3457 - accuracy: 0.8567 - val_loss: 0.4378 - val_accuracy: 0.8195
+
+Epoch 00031: val_loss did not improve from 0.43038
+Epoch 32/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.3323 - accuracy: 0.8590 - val_loss: 0.4342 - val_accuracy: 0.8261
+
+Epoch 00032: val_loss did not improve from 0.43038
+Epoch 33/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.3243 - accuracy: 0.8668 - val_loss: 0.4307 - val_accuracy: 0.8324
+
+Epoch 00033: val_loss did not improve from 0.43038
+Epoch 34/200
+85/85 [==============================] - 31s 370ms/step - loss: 0.3229 - accuracy: 0.8648 - val_loss: 0.4377 - val_accuracy: 0.8276
+
+Epoch 00034: val_loss did not improve from 0.43038
+Epoch 35/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.3163 - accuracy: 0.8697 - val_loss: 0.4218 - val_accuracy: 0.8250
+
+Epoch 00035: val_loss improved from 0.43038 to 0.42182, saving model to ./gru_models/GRU_35-0.4218_1.hdf5
+Epoch 36/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.3160 - accuracy: 0.8687 - val_loss: 0.4454 - val_accuracy: 0.8217
+
+Epoch 00036: val_loss did not improve from 0.42182
+Epoch 37/200
+85/85 [==============================] - 31s 371ms/step - loss: 0.3151 - accuracy: 0.8690 - val_loss: 0.4394 - val_accuracy: 0.8235
+
+Epoch 00037: val_loss did not improve from 0.42182
+Epoch 38/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.3042 - accuracy: 0.8748 - val_loss: 0.4353 - val_accuracy: 0.8302
+
+Epoch 00038: val_loss did not improve from 0.42182
+Epoch 39/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.3051 - accuracy: 0.8746 - val_loss: 0.4381 - val_accuracy: 0.8276
+
+Epoch 00039: val_loss did not improve from 0.42182
+Epoch 40/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.2939 - accuracy: 0.8754 - val_loss: 0.4169 - val_accuracy: 0.8368
+
+Epoch 00040: val_loss improved from 0.42182 to 0.41690, saving model to ./gru_models/GRU_40-0.4169_1.hdf5
+Epoch 41/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.3002 - accuracy: 0.8775 - val_loss: 0.4412 - val_accuracy: 0.8324
+
+Epoch 00041: val_loss did not improve from 0.41690
+Epoch 42/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2893 - accuracy: 0.8795 - val_loss: 0.4451 - val_accuracy: 0.8309
+
+Epoch 00042: val_loss did not improve from 0.41690
+Epoch 43/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2899 - accuracy: 0.8784 - val_loss: 0.4345 - val_accuracy: 0.8335
+
+Epoch 00043: val_loss did not improve from 0.41690
+Epoch 44/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2748 - accuracy: 0.8880 - val_loss: 0.4309 - val_accuracy: 0.8357
+
+Epoch 00044: val_loss did not improve from 0.41690
+Epoch 45/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.2774 - accuracy: 0.8869 - val_loss: 0.4315 - val_accuracy: 0.8354
+
+Epoch 00045: val_loss did not improve from 0.41690
+Epoch 46/200
+85/85 [==============================] - 32s 374ms/step - loss: 0.2785 - accuracy: 0.8854 - val_loss: 0.4527 - val_accuracy: 0.8298
+
+Epoch 00046: val_loss did not improve from 0.41690
+Epoch 47/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2747 - accuracy: 0.8879 - val_loss: 0.4327 - val_accuracy: 0.8365
+
+Epoch 00047: val_loss did not improve from 0.41690
+Epoch 48/200
+85/85 [==============================] - 32s 374ms/step - loss: 0.2712 - accuracy: 0.8902 - val_loss: 0.4512 - val_accuracy: 0.8350
+
+Epoch 00048: val_loss did not improve from 0.41690
+Epoch 49/200
+85/85 [==============================] - 32s 375ms/step - loss: 0.2676 - accuracy: 0.8883 - val_loss: 0.4411 - val_accuracy: 0.8294
+
+Epoch 00049: val_loss did not improve from 0.41690
+Epoch 50/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2746 - accuracy: 0.8883 - val_loss: 0.4446 - val_accuracy: 0.8361
+
+Epoch 00050: val_loss did not improve from 0.41690
+Epoch 51/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.2575 - accuracy: 0.8957 - val_loss: 0.4355 - val_accuracy: 0.8439
+
+Epoch 00051: val_loss did not improve from 0.41690
+Epoch 52/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2586 - accuracy: 0.8951 - val_loss: 0.4484 - val_accuracy: 0.8365
+
+Epoch 00052: val_loss did not improve from 0.41690
+Epoch 53/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.2581 - accuracy: 0.8960 - val_loss: 0.4541 - val_accuracy: 0.8335
+
+Epoch 00053: val_loss did not improve from 0.41690
+Epoch 54/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.2533 - accuracy: 0.8983 - val_loss: 0.4689 - val_accuracy: 0.8309
+
+Epoch 00054: val_loss did not improve from 0.41690
+Epoch 55/200
+85/85 [==============================] - 31s 371ms/step - loss: 0.2695 - accuracy: 0.8913 - val_loss: 0.4284 - val_accuracy: 0.8217
+
+Epoch 00055: val_loss did not improve from 0.41690
+Epoch 56/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.2714 - accuracy: 0.8909 - val_loss: 0.4414 - val_accuracy: 0.8339
+
+Epoch 00056: val_loss did not improve from 0.41690
+Epoch 57/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.2582 - accuracy: 0.8967 - val_loss: 0.4531 - val_accuracy: 0.8357
+
+Epoch 00057: val_loss did not improve from 0.41690
+Epoch 58/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.2546 - accuracy: 0.8983 - val_loss: 0.4712 - val_accuracy: 0.8368
+
+Epoch 00058: val_loss did not improve from 0.41690
+Epoch 59/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.2511 - accuracy: 0.8999 - val_loss: 0.4690 - val_accuracy: 0.8365
+
+Epoch 00059: val_loss did not improve from 0.41690
+Epoch 60/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.2377 - accuracy: 0.9058 - val_loss: 0.4605 - val_accuracy: 0.8402
+
+Epoch 00060: val_loss did not improve from 0.41690
+Epoch 61/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.2416 - accuracy: 0.9034 - val_loss: 0.4696 - val_accuracy: 0.8368
+
+Epoch 00061: val_loss did not improve from 0.41690
+Epoch 62/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.2356 - accuracy: 0.9072 - val_loss: 0.4459 - val_accuracy: 0.8402
+
+Epoch 00062: val_loss did not improve from 0.41690
+Epoch 63/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.2377 - accuracy: 0.9058 - val_loss: 0.4710 - val_accuracy: 0.8350
+
+Epoch 00063: val_loss did not improve from 0.41690
+Epoch 64/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.2239 - accuracy: 0.9074 - val_loss: 0.4633 - val_accuracy: 0.8380
+
+Epoch 00064: val_loss did not improve from 0.41690
+Epoch 65/200
+85/85 [==============================] - 32s 375ms/step - loss: 0.2262 - accuracy: 0.9103 - val_loss: 0.4554 - val_accuracy: 0.8402
+
+Epoch 00065: val_loss did not improve from 0.41690
+Epoch 66/200
+85/85 [==============================] - 32s 374ms/step - loss: 0.2239 - accuracy: 0.9092 - val_loss: 0.4755 - val_accuracy: 0.8361
+
+Epoch 00066: val_loss did not improve from 0.41690
+Epoch 67/200
+85/85 [==============================] - 32s 375ms/step - loss: 0.2273 - accuracy: 0.9070 - val_loss: 0.4507 - val_accuracy: 0.8383
+
+Epoch 00067: val_loss did not improve from 0.41690
+Epoch 68/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2193 - accuracy: 0.9127 - val_loss: 0.4835 - val_accuracy: 0.8391
+
+Epoch 00068: val_loss did not improve from 0.41690
+Epoch 69/200
+85/85 [==============================] - 32s 374ms/step - loss: 0.2124 - accuracy: 0.9171 - val_loss: 0.4898 - val_accuracy: 0.8339
+
+Epoch 00069: val_loss did not improve from 0.41690
+Epoch 70/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2118 - accuracy: 0.9170 - val_loss: 0.4684 - val_accuracy: 0.8346
+
+Epoch 00070: val_loss did not improve from 0.41690
+Epoch 71/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2090 - accuracy: 0.9168 - val_loss: 0.4821 - val_accuracy: 0.8383
+
+Epoch 00071: val_loss did not improve from 0.41690
+Epoch 72/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.2099 - accuracy: 0.9157 - val_loss: 0.4925 - val_accuracy: 0.8402
+
+Epoch 00072: val_loss did not improve from 0.41690
+Epoch 73/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2067 - accuracy: 0.9195 - val_loss: 0.4848 - val_accuracy: 0.8313
+
+Epoch 00073: val_loss did not improve from 0.41690
+Epoch 74/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.2069 - accuracy: 0.9228 - val_loss: 0.4866 - val_accuracy: 0.8324
+
+Epoch 00074: val_loss did not improve from 0.41690
+Epoch 75/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.2079 - accuracy: 0.9205 - val_loss: 0.4851 - val_accuracy: 0.8383
+
+Epoch 00075: val_loss did not improve from 0.41690
+Epoch 76/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.1997 - accuracy: 0.9196 - val_loss: 0.4896 - val_accuracy: 0.8417
+
+Epoch 00076: val_loss did not improve from 0.41690
+Epoch 77/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.1977 - accuracy: 0.9233 - val_loss: 0.5018 - val_accuracy: 0.8317
+
+Epoch 00077: val_loss did not improve from 0.41690
+Epoch 78/200
+85/85 [==============================] - 31s 370ms/step - loss: 0.1989 - accuracy: 0.9210 - val_loss: 0.4799 - val_accuracy: 0.8383
+
+Epoch 00078: val_loss did not improve from 0.41690
+Epoch 79/200
+85/85 [==============================] - 31s 370ms/step - loss: 0.1983 - accuracy: 0.9229 - val_loss: 0.5228 - val_accuracy: 0.8376
+
+Epoch 00079: val_loss did not improve from 0.41690
+Epoch 80/200
+85/85 [==============================] - 32s 371ms/step - loss: 0.1921 - accuracy: 0.9235 - val_loss: 0.4771 - val_accuracy: 0.8391
+
+Epoch 00080: val_loss did not improve from 0.41690
+Epoch 81/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.1831 - accuracy: 0.9293 - val_loss: 0.5174 - val_accuracy: 0.8354
+
+Epoch 00081: val_loss did not improve from 0.41690
+Epoch 82/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.1887 - accuracy: 0.9259 - val_loss: 0.4862 - val_accuracy: 0.8398
+
+Epoch 00082: val_loss did not improve from 0.41690
+Epoch 83/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.1791 - accuracy: 0.9293 - val_loss: 0.4967 - val_accuracy: 0.8343
+
+Epoch 00083: val_loss did not improve from 0.41690
+Epoch 84/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.1820 - accuracy: 0.9275 - val_loss: 0.5718 - val_accuracy: 0.8283
+
+Epoch 00084: val_loss did not improve from 0.41690
+Epoch 85/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.1807 - accuracy: 0.9320 - val_loss: 0.4967 - val_accuracy: 0.8331
+
+Epoch 00085: val_loss did not improve from 0.41690
+Epoch 86/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.1798 - accuracy: 0.9289 - val_loss: 0.5676 - val_accuracy: 0.8350
+
+Epoch 00086: val_loss did not improve from 0.41690
+Epoch 87/200
+85/85 [==============================] - 32s 374ms/step - loss: 0.1792 - accuracy: 0.9285 - val_loss: 0.5222 - val_accuracy: 0.8324
+
+Epoch 00087: val_loss did not improve from 0.41690
+Epoch 88/200
+85/85 [==============================] - 32s 373ms/step - loss: 0.1756 - accuracy: 0.9315 - val_loss: 0.5155 - val_accuracy: 0.8357
+
+Epoch 00088: val_loss did not improve from 0.41690
+Epoch 89/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.1751 - accuracy: 0.9347 - val_loss: 0.5446 - val_accuracy: 0.8335
+
+Epoch 00089: val_loss did not improve from 0.41690
+Epoch 90/200
+85/85 [==============================] - 32s 372ms/step - loss: 0.1617 - accuracy: 0.9384 - val_loss: 0.5293 - val_accuracy: 0.8405
+
+Epoch 00090: val_loss did not improve from 0.41690
+Epoch 00090: early stopping
+WARNING:tensorflow:Layer gru will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+WARNING:tensorflow:Layer gru will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+WARNING:tensorflow:Layer gru will not use cuDNN kernel since it doesn't meet the cuDNN kernel criteria. It will use generic GPU kernel as fallback when running on GPU
+11/11 [==============================] - 1s 53ms/step - loss: 0.4079 - accuracy: 0.8357
+[[ 710  304]
+ [ 126 1563]]
+              precision    recall  f1-score   support
+
+       uncon       0.85      0.70      0.77      1014
+         con       0.84      0.93      0.88      1689
+
+   micro avg       0.84      0.84      0.84      2703
+   macro avg       0.84      0.81      0.82      2703
+weighted avg       0.84      0.84      0.84      2703
+ samples avg       0.84      0.84      0.84      2703
+
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+bidirectional (Bidirectional (None, 300)               234900    
+_________________________________________________________________
+batch_normalization (BatchNo (None, 300)               1200      
+_________________________________________________________________
+dropout (Dropout)            (None, 300)               0         
+_________________________________________________________________
+dense (Dense)                (None, 150)               45150     
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 150)               600       
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 150)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 2)                 302       
+=================================================================
+Total params: 282,152
+Trainable params: 281,252
+Non-trainable params: 900
+_________________________________________________________________
+None
+>#1: 83.574
+Run 1's time: 2871.9214086532593
+[83.57380628585815]
+Accuracy: 83.574% (+/-0.000)
+Total running time: 2872.8245096206665
