@@ -4,9 +4,9 @@
 ### How to use.
 ```
 $ python3 data_preprocessing_keras_bi.py
-$ python3 model_rnn_BI_BN_IN.py --repeats [INTEGER] --verbose [0|1|2] --epochs [INTEGER] --batch_size [INTEGER] --drop_out [FLOAT] --lr [FLOAT] --n_hidden [INTEGER] --decay [FLOAT] --device ['cpu'|'gpu]    
-$ python3 model_lstm_BI_BN_IN.py --repeats [INTEGER] --verbose [0|1|2] --epochs [INTEGER] --batch_size [INTEGER] --drop_out [FLOAT] --lr [FLOAT] --n_hidden [INTEGER] --decay [FLOAT] --device ['cpu'|'gpu]
-$ python3 model_gru_BI_BN_IN.py --repeats [INTEGER] --verbose [0|1|2] --epochs [INTEGER] --batch_size [INTEGER] --drop_out [FLOAT] --lr [FLOAT] --n_hidden [INTEGER] --decay [FLOAT] --device ['cpu'|'gpu]
+$ python3 model_rnn.py --repeats [INTEGER] --verbose [0|1|2] --epochs [INTEGER] --batch_size [INTEGER] --drop_out [FLOAT] --lr [FLOAT] --n_hidden [INTEGER] --decay [FLOAT] --device ['cpu'|'gpu]    
+$ python3 model_lstm.py --repeats [INTEGER] --verbose [0|1|2] --epochs [INTEGER] --batch_size [INTEGER] --drop_out [FLOAT] --lr [FLOAT] --n_hidden [INTEGER] --decay [FLOAT] --device ['cpu'|'gpu]
+$ python3 model_gru.py --repeats [INTEGER] --verbose [0|1|2] --epochs [INTEGER] --batch_size [INTEGER] --drop_out [FLOAT] --lr [FLOAT] --n_hidden [INTEGER] --decay [FLOAT] --device ['cpu'|'gpu]
 ```
 ### Code description
 >data_preprocessing_keras_bi.py
@@ -19,13 +19,13 @@ $ python3 model_gru_BI_BN_IN.py --repeats [INTEGER] --verbose [0|1|2] --epochs [
 >>>레이블 전처리 코드
 >>>5초 단위 레이블을 dictionary 형태로 변형
 
->model_rnn_BI_BN_IN.py
+>model_rnn.py
 >>Vanilla RNN 실행 코드
 
->model_lstm_BI_BN_IN.py
+>model_lstm.py
 >>LSTM 실행 코드
 
->model_gru_BI_BN_IN.py
+>model_gru.py
 >>GRU 실행 코드
 
 >cheack_target.py
