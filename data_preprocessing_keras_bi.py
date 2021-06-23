@@ -2,7 +2,7 @@
 # data preprocessing(binary)
 
 # At macbook
-from elearning_study_keras import label_preprocess
+import label_preprocess
 # At home
 # import label_preprocess
 import pandas as pd
@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 import warnings
 import os
 import glob
-from tqdm import tqdm_notebook
+from tqdm import tqdm_gui
 import pickle
 import time
 
@@ -68,7 +68,7 @@ class Dataloader:
 
     def loop(self):
 
-        for path in tqdm_notebook(self.csv_list):
+        for path in tqdm_gui(self.csv_list):
             print(path)
             data = pd.read_csv(path)
 
