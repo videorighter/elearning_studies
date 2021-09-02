@@ -181,7 +181,6 @@ class Dataloader:
                 ]]
 
                 trans = StandardScaler()
-
                 input_data = trans.fit_transform(sample_input)
                 target_data = sample_data['label'].astype(int)
 
@@ -207,6 +206,8 @@ if __name__ == '__main__':
 
     dataloader = Dataloader(csvlist=csv_list, labeldict=label_dict_copy)
     tmp_input, tmp_target = dataloader.loop()
+    print(tmp_input)
+    print(tmp_input.shape)
 
     result_input, result_target = result(tmp_input=tmp_input,
                                          tmp_target=tmp_target)

@@ -3,6 +3,7 @@
 
 import csv
 
+
 def labeling(path):
     # create label dictionary
     label_dict = {}
@@ -16,5 +17,8 @@ def labeling(path):
     return label_dict
 
 if __name__ == '__main__':
-    label_dict = labeling('/home/oldman/study/label_100.csv')
+    try:
+        label_dict = labeling('/home/oldman/study/label_100.csv')
+    except FileNotFoundError:
+        label_dict = labeling('/Users/oldman/Documents/study/elearning_study_keras/label_100.csv')
     print(label_dict)

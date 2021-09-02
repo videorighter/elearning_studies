@@ -36,7 +36,7 @@ def model_execution(X_train, X_val, X_test, y_train, y_val, y_test, num, args):
     decay = args.decay  # 1e-6
     device = args.device
 
-    MODEL_SAVE_FOLDER_PATH = f'./gru_models_{args.epochs}_{args.batch_size}_{args.drop_out}_{args.lr}/'
+    MODEL_SAVE_FOLDER_PATH = f'./gru_models_{args.rnn_layer}_{args.ff_layer}_{args.epochs}_{args.batch_size}_{args.drop_out}_{args.lr}/'
 
     if not args.plot_only:
 
@@ -63,6 +63,18 @@ def model_execution(X_train, X_val, X_test, y_train, y_val, y_test, num, args):
 
         with tf.device(f'/{device}:0'):
             model = Sequential()
+
+            if args.rnn_layer == 2:
+                model.add(Bidirectional(GRU(hidden,
+                                                  return_sequences=True,
+                                                  recurrent_dropout=dropout,
+                                                  dropout=dropout,
+                                                  recurrent_initializer="orthogonal",
+                                                  bias_initializer="zeros"),
+                                        input_shape=(n_timesteps, n_features)))
+                model.add(BatchNormalization())
+                model.add(Dropout(dropout))
+
             model.add(Bidirectional(GRU(hidden,
                                         recurrent_dropout=dropout,
                                         dropout=dropout,
@@ -71,12 +83,23 @@ def model_execution(X_train, X_val, X_test, y_train, y_val, y_test, num, args):
                                     input_shape=(n_timesteps, n_features)))
             model.add(BatchNormalization())
             model.add(Dropout(dropout))
-            model.add(Dense(hidden,
-                            kernel_initializer=HeNormal(),
-                            bias_initializer='zeros',
-                            activation='relu'))
-            model.add(BatchNormalization())
-            model.add(Dropout(dropout))
+
+            if args.ff_layer == (2 or 3):
+                model.add(Dense(hidden,
+                                kernel_initializer=HeNormal(),
+                                bias_initializer='zeros',
+                                activation='relu'))
+                model.add(BatchNormalization())
+                model.add(Dropout(dropout))
+
+            if args.ff_layer == 3:
+                model.add(Dense(hidden,
+                                kernel_initializer=HeNormal(),
+                                bias_initializer='zeros',
+                                activation='relu'))
+                model.add(BatchNormalization())
+                model.add(Dropout(dropout))
+
             model.add(Dense(n_outputs,
                             kernel_initializer=HeNormal(),
                             bias_initializer='zeros',
@@ -107,6 +130,10 @@ def model_execution(X_train, X_val, X_test, y_train, y_val, y_test, num, args):
         y_pred_class = (y_pred > 0.5)
         cm = confusion_matrix(y_test.argmax(axis=1), y_pred.argmax(axis=1))
         report = classification_report(y_test, y_pred_class, target_names=['uncon', 'con'])
+        uncon_recall = cm[0][0] / (cm[0][0] + cm[1][0])
+        uncon_precision = cm[0][0] / (cm[0][0] + cm[0][1])
+        con_recall = cm[1][1] / (cm[0][1] + cm[1][1])
+        con_precision = cm[1][1] / (cm[1][0] + cm[1][1])
         print(cm)
         print(report)
         print(best_model.summary())
@@ -125,6 +152,10 @@ def model_execution(X_train, X_val, X_test, y_train, y_val, y_test, num, args):
         y_pred_class = (y_pred > 0.5)
         cm = confusion_matrix(y_test.argmax(axis=1), y_pred.argmax(axis=1))
         report = classification_report(y_test, y_pred_class, target_names=['uncon', 'con'])
+        uncon_recall = cm[0][0] / (cm[0][0] + cm[1][0])
+        uncon_precision = cm[0][0] / (cm[0][0] + cm[0][1])
+        con_recall = cm[1][1] / (cm[0][1] + cm[1][1])
+        con_precision = cm[1][1] / (cm[1][0] + cm[1][1])
         print(cm)
         print(report)
         print(best_model.summary())
@@ -135,6 +166,10 @@ def model_execution(X_train, X_val, X_test, y_train, y_val, y_test, num, args):
             f.write(f"GRU {num + 1}'s execution \n"
                     f"confusion matrix: \n {cm} \n"
                     f"accuracy: \n {accuracy} \n"
+                    f"uncon reall: {uncon_recall} \n"
+                    f"uncon precision: {uncon_precision} \n"
+                    f"con recall: {con_recall} \n"
+                    f"con precision: {con_precision} \n"
                     f"classification report: \n {report} \n"
                     f"history: \n {history} \n")
     else:
@@ -142,6 +177,10 @@ def model_execution(X_train, X_val, X_test, y_train, y_val, y_test, num, args):
             f.write(f"GRU {num + 1}'s execution"
                     f"confusion matrix: \n {cm} \n"
                     f"accuracy: \n {accuracy} \n"
+                    f"uncon reall: {uncon_recall} \n"
+                    f"uncon precision: {uncon_precision} \n"
+                    f"con recall: {con_recall} \n"
+                    f"con precision: {con_precision} \n"
                     f"classification report: \n {report} \n"
                     f"history: {history} \n")
 
@@ -149,7 +188,7 @@ def model_execution(X_train, X_val, X_test, y_train, y_val, y_test, num, args):
 
 
 def draw_plot(y_test, y_pred, cm, num, history, args):
-    MODEL_SAVE_FOLDER_PATH = f'./gru_models_{args.epochs}_{args.batch_size}_{args.drop_out}_{args.lr}/'
+    MODEL_SAVE_FOLDER_PATH = f'./gru_models_{args.rnn_layer}_{args.ff_layer}_{args.epochs}_{args.batch_size}_{args.drop_out}_{args.lr}/'
     group_counts = ["{0:0.0f}".format(value) for value in cm.flatten()]
     group_percentage = ["{0:.2%}".format(value) for value in cm.flatten() / np.sum(cm)]
     labels = [f"{v1}\n{v2}" for v1, v2 in zip(group_counts, group_percentage)]
@@ -158,10 +197,10 @@ def draw_plot(y_test, y_pred, cm, num, history, args):
 
     if not args.plot_only:
         plt.figure(figsize=(10, 8))
-        plt.plot(history['accuracy'])
-        plt.plot(history['val_accuracy'])
-        plt.plot(history['loss'])
-        plt.plot(history['val_loss'])
+        plt.plot(history['accuracy'], linestyle='-')
+        plt.plot(history['val_accuracy'], linestyle=':')
+        plt.plot(history['loss'], linestyle='--')
+        plt.plot(history['val_loss'], linestyle='-.')
         plt.title('Accuracy/Loss plot for GRU classifier', fontsize=20)
         plt.ylabel('Accuracy/Loss', fontsize=17)
         plt.xlabel('Epochs', fontsize=17)
@@ -211,7 +250,7 @@ def draw_plot(y_test, y_pred, cm, num, history, args):
 
 # summarize scores
 def summarize_results(scores, args):
-    MODEL_SAVE_FOLDER_PATH = f'./gru_models_{args.epochs}_{args.batch_size}_{args.drop_out}_{args.lr}/'
+    MODEL_SAVE_FOLDER_PATH = f'./gru_models_{args.rnn_layer}_{args.ff_layer}_{args.epochs}_{args.batch_size}_{args.drop_out}_{args.lr}/'
     print(scores)
     m, s = np.mean(scores), np.std(scores)
     print('Accuracy: %.3f%% (+/-%.3f)' % (m, s))
@@ -226,7 +265,7 @@ def summarize_results(scores, args):
 
 # run an experiment
 def run_experiment(args):
-    MODEL_SAVE_FOLDER_PATH = f'./gru_models_{args.epochs}_{args.batch_size}_{args.drop_out}_{args.lr}/'
+    MODEL_SAVE_FOLDER_PATH = f'./gru_models_{args.rnn_layer}_{args.ff_layer}_{args.epochs}_{args.batch_size}_{args.drop_out}_{args.lr}/'
 
     # load data
     with open('./X_train.bin', 'rb') as f:
@@ -280,10 +319,12 @@ def main():
     parser.add_argument('--device', type=str, default='gpu', help='Select device to execute')
     parser.add_argument('--decay', type=float, default=1e-6, help='Learning rate decay')
     parser.add_argument('--plot_only', type=bool, default=False, help='If only plot')
+    parser.add_argument('--rnn_layer', type=int, default=2, help='Number of RNN layer')
+    parser.add_argument('--ff_layer', type=int, default=2, help='Number of FF layer')
     args = parser.parse_args()
 
     total_start = time.time()
-    MODEL_SAVE_FOLDER_PATH = f'./gru_models_{args.epochs}_{args.batch_size}_{args.drop_out}_{args.lr}/'
+    MODEL_SAVE_FOLDER_PATH = f'./gru_models_{args.rnn_layer}_{args.ff_layer}_{args.epochs}_{args.batch_size}_{args.drop_out}_{args.lr}/'
     run_experiment(args)
     print(f"Total running time: {time.time() - total_start}")
 
